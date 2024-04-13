@@ -1,15 +1,16 @@
 {
-  "name": "golem",
+  "name": "ekl",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "test:run": "turbo test:run",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "lint:fix": "turbo lint:fix",
+    "format": "biome format --write \"**/*.{js,ts,json,md}\""
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "@biomejs/biome": "1.6.4",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
@@ -17,8 +18,5 @@
     "node": ">=18"
   },
   "packageManager": "bun@1.0.35",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "workspaces": ["packages/*", "examples/*"]
 }

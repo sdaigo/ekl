@@ -1,0 +1,21 @@
+{
+  "name": "@ekl/runtime",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/ekl.js",
+  "files": ["dist/ekl.js"],
+  "scripts": {
+    "dev": "echo 'Add dev script here'",
+    "build": "tsup",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "lint": "biome lint ./src",
+    "lint:fix": "biome lint --apply ./src",
+    "prepack": "bun run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "vitest": "^1.5.0",
+    "jsdom": "^24.0.0"
+  }
+}
